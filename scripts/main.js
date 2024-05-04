@@ -1,4 +1,4 @@
-const gridContainer = document.getElementById('grid-container');
+
 /*
 for (let i = 1; i <= 100; i++) {
     const cell = document.createElement('div');
@@ -14,16 +14,21 @@ for (let i = 1; i <= 100; i++) {
 }
 */
 
+const gridContainer = document.getElementById('grid-container');
 
 function createCell(id) {
     const cell = document.createElement('div');
     cell.className = 'grid-item';
     cell.id = 'cell' + id;
-    cell.textContent = id;
-
+    // innerHTML a vuoto inizialmente per non visualizzare nulla
+    cell.innerHTML = '';  
     cell.addEventListener('click', function() {
-        console.log('Cella cliccata: ' + cell.textContent); 
-        cell.style.backgroundColor = 'lightblue'; 
+        //  aggiungere il numero solo quando viene cliccato
+        if (this.innerHTML === '') {
+            this.innerHTML = id;  // Mostra il numero solo al click
+        }
+        console.log('Cella cliccata: ' + this.innerHTML);
+        this.style.backgroundColor = 'lightblue'; // colore di sfondo al clic.
     });
     return cell;
 }
