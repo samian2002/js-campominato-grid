@@ -1,0 +1,26 @@
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px; /* Larghezza del contenitore della griglia */
+    margin: 20px auto; /* Centra la griglia orizzontalmente e aggiunge margine sopra e sotto */
+    background-color: #f4f4f4; /* Sfondo leggero per il contenitore */
+}
+
+.grid-item {
+    width: 48px; /* Larghezza di ogni cella */
+    height: 48px; /* Altezza di ogni cella */
+    border: 1px solid #ddd; /* Bordo sottile e discreto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px; /* Piccolo spazio tra le celle */
+    font-family: Arial, sans-serif; /* Font moderno e leggibile */
+    color: #333; /* Colore del testo scuro per contrasto */
+    font-size: 14px; /* Dimensione del testo leggibile */
+    transition: background-color 0.3s, font-size 0.3s; /* Transizione dolce per effetti */
+}
+
+.grid-item:hover {
+    background-color: #e0e0e0; /* Cambio colore allo hover */
+    font-size: 16px; /* Aumento della dimensione del testo */
+}
